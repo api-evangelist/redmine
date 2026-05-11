@@ -1,0 +1,131 @@
+aid: redmine
+name: Redmine
+description: >-
+  Redmine is a flexible open source project management web application
+  written in Ruby on Rails that supports multiple projects, issue tracking,
+  Gantt charts, wikis, forums, time tracking, and SCM integration. The
+  Redmine REST API exposes JSON and XML endpoints for issues, projects,
+  users, time entries, wiki pages, attachments, and more. Authentication
+  is supported via HTTP Basic credentials or per-user API keys, with
+  optional user impersonation for administrator accounts.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Project Management
+  - Issue Tracking
+  - Open Source
+  - Ruby on Rails
+  - Bug Tracking
+  - Time Tracking
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/redmine/refs/heads/main/apis.yml
+created: '2026-05-11'
+modified: '2026-05-11'
+specificationVersion: '0.19'
+apis:
+  - aid: redmine:rest-api
+    name: Redmine REST API
+    description: >-
+      REST API for Redmine providing JSON and XML access to issues,
+      projects, users, time entries, wiki pages, attachments, versions,
+      and other entities. Authentication uses HTTP Basic credentials or
+      a per-user API key, with X-Redmine-Switch-User for impersonation.
+    humanURL: https://www.redmine.org/projects/redmine/wiki/rest_api
+    baseURL: https://<your-redmine-host>
+    tags:
+      - Project Management
+      - Issue Tracking
+      - Time Tracking
+      - Wiki
+    properties:
+      - type: Documentation
+        url: https://www.redmine.org/projects/redmine/wiki/rest_api
+      - type: Issues API
+        url: https://www.redmine.org/projects/redmine/wiki/Rest_Issues
+      - type: Projects API
+        url: https://www.redmine.org/projects/redmine/wiki/Rest_Projects
+
+common:
+  - type: Website
+    url: https://www.redmine.org
+  - type: Documentation
+    url: https://www.redmine.org/guide
+  - type: API Documentation
+    url: https://www.redmine.org/projects/redmine/wiki/rest_api
+  - type: Download
+    url: https://www.redmine.org/projects/redmine/wiki/Download
+  - type: Source Code
+    url: https://www.redmine.org/projects/redmine/repository
+  - type: GitHub Mirror
+    url: https://github.com/redmine/redmine
+  - type: Plugins
+    url: https://www.redmine.org/plugins
+  - type: Forums
+    url: https://www.redmine.org/projects/redmine/boards
+  - type: Issue Tracker
+    url: https://www.redmine.org/projects/redmine/issues
+  - type: License
+    url: https://www.redmine.org/projects/redmine/wiki/Redmine_License
+features:
+  - name: Issue Tracking
+    description: >-
+      Create, update, query, and relate issues with custom fields,
+      categories, priorities, statuses, and workflow transitions.
+  - name: Project Management
+    description: >-
+      Multi-project support with sub-projects, modules, memberships,
+      versions, and per-project configuration.
+  - name: Time Tracking
+    description: >-
+      Log and report time entries against issues, projects, and
+      activities through dedicated API endpoints.
+  - name: Wiki and Documents
+    description: >-
+      Per-project wikis and document attachments accessible via REST
+      endpoints for full programmatic content management.
+  - name: Gantt and Calendars
+    description: >-
+      Project scheduling, Gantt charts, and calendar views driven
+      from issue start and due dates.
+  - name: SCM Integration
+    description: >-
+      Repository browser integration for Git, Subversion, Mercurial,
+      Bazaar, CVS, and Darcs.
+solutions:
+  - name: Open Source Project Management
+    description: >-
+      Self-hosted project management for engineering teams that need
+      issue tracking, wikis, and time tracking under a free license.
+  - name: Bug Tracking
+    description: >-
+      Issue lifecycle management with custom workflows, statuses,
+      and notifications for software defect tracking.
+  - name: Internal Ticketing
+    description: >-
+      Track internal team requests and tasks across multiple projects
+      with role-based access control.
+useCases:
+  - name: Issue Sync to External Systems
+    description: >-
+      Mirror Redmine issues into BI, reporting, or downstream tools
+      via the REST issues endpoint.
+  - name: Automated Ticket Creation
+    description: >-
+      Create Redmine issues automatically from monitoring, CI, or
+      customer support workflows via REST.
+  - name: Time Tracking Reporting
+    description: >-
+      Extract logged time entries via REST for billing, payroll,
+      and project profitability reporting.
+integrations:
+  - name: Git
+    description: Browse Git repositories linked to Redmine projects
+  - name: Subversion
+    description: Built-in Subversion repository browsing
+  - name: LDAP
+    description: LDAP/Active Directory authentication
+  - name: Email
+    description: Incoming and outgoing email for issue creation and notifications
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
