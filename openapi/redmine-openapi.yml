@@ -1,0 +1,265 @@
+openapi: 3.1.0
+info:
+  title: Redmine REST API
+  description: REST API for Redmine project management. Base URL is your Redmine instance URL.
+  version: "1.0.0"
+servers:
+  - url: https://{redmine_host}
+    description: Redmine instance
+    variables:
+      redmine_host:
+        default: redmine.example.com
+security:
+  - apiKeyHeader: []
+  - apiKeyQuery: []
+  - basicAuth: []
+components:
+  securitySchemes:
+    apiKeyHeader:
+      type: apiKey
+      in: header
+      name: X-Redmine-API-Key
+    apiKeyQuery:
+      type: apiKey
+      in: query
+      name: key
+    basicAuth:
+      type: http
+      scheme: basic
+  parameters:
+    offset:
+      name: offset
+      in: query
+      schema: { type: integer, default: 0 }
+    limit:
+      name: limit
+      in: query
+      schema: { type: integer, default: 25, maximum: 100 }
+    id:
+      name: id
+      in: path
+      required: true
+      schema: { type: string }
+paths:
+  /issues.json:
+    get:
+      summary: List issues
+      parameters:
+        - $ref: "#/components/parameters/offset"
+        - $ref: "#/components/parameters/limit"
+      responses:
+        "200":
+          description: Issue collection
+    post:
+      summary: Create issue
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { type: object }
+      responses:
+        "201": { description: Issue created }
+  /issues/{id}.json:
+    parameters:
+      - $ref: "#/components/parameters/id"
+    get:
+      summary: Show issue
+      responses:
+        "200": { description: Issue }
+    put:
+      summary: Update issue
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { type: object }
+      responses:
+        "204": { description: Updated }
+    delete:
+      summary: Delete issue
+      responses:
+        "204": { description: Deleted }
+  /projects.json:
+    get:
+      summary: List projects
+      parameters:
+        - $ref: "#/components/parameters/offset"
+        - $ref: "#/components/parameters/limit"
+      responses:
+        "200": { description: Project collection }
+    post:
+      summary: Create project
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { type: object }
+      responses:
+        "201": { description: Project created }
+  /projects/{id}.json:
+    parameters:
+      - $ref: "#/components/parameters/id"
+    get:
+      summary: Show project
+      responses:
+        "200": { description: Project }
+    put:
+      summary: Update project
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { type: object }
+      responses:
+        "204": { description: Updated }
+    delete:
+      summary: Delete project
+      responses:
+        "204": { description: Deleted }
+  /users.json:
+    get:
+      summary: List users
+      parameters:
+        - $ref: "#/components/parameters/offset"
+        - $ref: "#/components/parameters/limit"
+      responses:
+        "200": { description: Users collection }
+    post:
+      summary: Create user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { type: object }
+      responses:
+        "201": { description: User created }
+  /users/{id}.json:
+    parameters:
+      - $ref: "#/components/parameters/id"
+    get:
+      summary: Show user
+      responses:
+        "200": { description: User }
+    put:
+      summary: Update user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { type: object }
+      responses:
+        "204": { description: Updated }
+    delete:
+      summary: Delete user
+      responses:
+        "204": { description: Deleted }
+  /time_entries.json:
+    get:
+      summary: List time entries
+      responses:
+        "200": { description: Time entries }
+    post:
+      summary: Create time entry
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { type: object }
+      responses:
+        "201": { description: Created }
+  /time_entries/{id}.json:
+    parameters:
+      - $ref: "#/components/parameters/id"
+    get:
+      summary: Show time entry
+      responses:
+        "200": { description: Time entry }
+    put:
+      summary: Update time entry
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { type: object }
+      responses:
+        "204": { description: Updated }
+    delete:
+      summary: Delete time entry
+      responses:
+        "204": { description: Deleted }
+  /attachments/{id}.json:
+    parameters:
+      - $ref: "#/components/parameters/id"
+    get:
+      summary: Show attachment
+      responses:
+        "200": { description: Attachment }
+    delete:
+      summary: Delete attachment
+      responses:
+        "204": { description: Deleted }
+  /uploads.json:
+    post:
+      summary: Upload file
+      requestBody:
+        required: true
+        content:
+          application/octet-stream:
+            schema:
+              type: string
+              format: binary
+      responses:
+        "201": { description: Upload token returned }
+  /wiki_pages.json:
+    get:
+      summary: List wiki pages
+      responses:
+        "200": { description: Wiki pages }
+    post:
+      summary: Create wiki page
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { type: object }
+      responses:
+        "201": { description: Created }
+  /issue_statuses.json:
+    get:
+      summary: List issue statuses
+      responses:
+        "200": { description: Issue statuses }
+  /trackers.json:
+    get:
+      summary: List trackers
+      responses:
+        "200": { description: Trackers }
+  /roles.json:
+    get:
+      summary: List roles
+      responses:
+        "200": { description: Roles }
+  /groups.json:
+    get:
+      summary: List groups
+      responses:
+        "200": { description: Groups }
+    post:
+      summary: Create group
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { type: object }
+      responses:
+        "201": { description: Created }
+  /custom_fields.json:
+    get:
+      summary: List custom fields
+      responses:
+        "200": { description: Custom fields }
+  /my/account.json:
+    get:
+      summary: Get my account
+      responses:
+        "200": { description: My account }
