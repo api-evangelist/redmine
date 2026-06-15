@@ -1,0 +1,544 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Redmine REST API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-Redmine-API-Key",
+      "value": "{{X-Redmine-API-Key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "List issues",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://{redmine_host}/issues.json",
+        "params": [
+          {
+            "name": "offset",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "limit",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "List issues"
+    },
+    {
+      "info": {
+        "name": "Create issue",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://{redmine_host}/issues.json",
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Create issue"
+    },
+    {
+      "info": {
+        "name": "Show issue",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://{redmine_host}/issues/:id.json",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Show issue"
+    },
+    {
+      "info": {
+        "name": "Update issue",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "https://{redmine_host}/issues/:id.json",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Update issue"
+    },
+    {
+      "info": {
+        "name": "Delete issue",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "https://{redmine_host}/issues/:id.json",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete issue"
+    },
+    {
+      "info": {
+        "name": "List projects",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://{redmine_host}/projects.json",
+        "params": [
+          {
+            "name": "offset",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "limit",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "List projects"
+    },
+    {
+      "info": {
+        "name": "Create project",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://{redmine_host}/projects.json",
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Create project"
+    },
+    {
+      "info": {
+        "name": "Show project",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://{redmine_host}/projects/:id.json",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Show project"
+    },
+    {
+      "info": {
+        "name": "Update project",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "https://{redmine_host}/projects/:id.json",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Update project"
+    },
+    {
+      "info": {
+        "name": "Delete project",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "https://{redmine_host}/projects/:id.json",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete project"
+    },
+    {
+      "info": {
+        "name": "List users",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://{redmine_host}/users.json",
+        "params": [
+          {
+            "name": "offset",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "limit",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "List users"
+    },
+    {
+      "info": {
+        "name": "Create user",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://{redmine_host}/users.json",
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Create user"
+    },
+    {
+      "info": {
+        "name": "Show user",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://{redmine_host}/users/:id.json",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Show user"
+    },
+    {
+      "info": {
+        "name": "Update user",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "https://{redmine_host}/users/:id.json",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Update user"
+    },
+    {
+      "info": {
+        "name": "Delete user",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "https://{redmine_host}/users/:id.json",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete user"
+    },
+    {
+      "info": {
+        "name": "List time entries",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://{redmine_host}/time_entries.json"
+      },
+      "docs": "List time entries"
+    },
+    {
+      "info": {
+        "name": "Create time entry",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://{redmine_host}/time_entries.json",
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Create time entry"
+    },
+    {
+      "info": {
+        "name": "Show time entry",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://{redmine_host}/time_entries/:id.json",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Show time entry"
+    },
+    {
+      "info": {
+        "name": "Update time entry",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "https://{redmine_host}/time_entries/:id.json",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Update time entry"
+    },
+    {
+      "info": {
+        "name": "Delete time entry",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "https://{redmine_host}/time_entries/:id.json",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete time entry"
+    },
+    {
+      "info": {
+        "name": "Show attachment",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://{redmine_host}/attachments/:id.json",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Show attachment"
+    },
+    {
+      "info": {
+        "name": "Delete attachment",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "https://{redmine_host}/attachments/:id.json",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete attachment"
+    },
+    {
+      "info": {
+        "name": "Upload file",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://{redmine_host}/uploads.json"
+      },
+      "docs": "Upload file"
+    },
+    {
+      "info": {
+        "name": "List wiki pages",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://{redmine_host}/wiki_pages.json"
+      },
+      "docs": "List wiki pages"
+    },
+    {
+      "info": {
+        "name": "Create wiki page",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://{redmine_host}/wiki_pages.json",
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Create wiki page"
+    },
+    {
+      "info": {
+        "name": "List issue statuses",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://{redmine_host}/issue_statuses.json"
+      },
+      "docs": "List issue statuses"
+    },
+    {
+      "info": {
+        "name": "List trackers",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://{redmine_host}/trackers.json"
+      },
+      "docs": "List trackers"
+    },
+    {
+      "info": {
+        "name": "List roles",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://{redmine_host}/roles.json"
+      },
+      "docs": "List roles"
+    },
+    {
+      "info": {
+        "name": "List groups",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://{redmine_host}/groups.json"
+      },
+      "docs": "List groups"
+    },
+    {
+      "info": {
+        "name": "Create group",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://{redmine_host}/groups.json",
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Create group"
+    },
+    {
+      "info": {
+        "name": "List custom fields",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://{redmine_host}/custom_fields.json"
+      },
+      "docs": "List custom fields"
+    },
+    {
+      "info": {
+        "name": "Get my account",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://{redmine_host}/my/account.json"
+      },
+      "docs": "Get my account"
+    }
+  ],
+  "bundled": true
+}
