@@ -46,6 +46,10 @@ apis:
         url: https://www.redmine.org/projects/redmine/wiki/Rest_Projects
 
 common:
+  - type: DomainSecurity
+    url: security/redmine-domain-security.yml
+  - type: Authentication
+    url: authentication/redmine-authentication.yml
   - type: Website
     url: https://www.redmine.org
   - type: Documentation
@@ -58,6 +62,8 @@ common:
     url: https://www.redmine.org/projects/redmine/repository
   - type: GitHub Mirror
     url: https://github.com/redmine/redmine
+  - url: https://www.redmine.org/news.atom
+    type: Blog
   - type: Plugins
     url: https://www.redmine.org/plugins
   - type: Forums

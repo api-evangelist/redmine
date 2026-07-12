@@ -1,0 +1,28 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/redmine-openapi.yml
+summary:
+  types:
+  - apiKey
+  - http
+  api_key_in:
+  - header
+  - query
+schemes:
+- name: apiKeyHeader
+  type: apiKey
+  in: header
+  parameter: X-Redmine-API-Key
+  sources:
+  - openapi/redmine-openapi.yml
+- name: apiKeyQuery
+  type: apiKey
+  in: query
+  parameter: key
+  sources:
+  - openapi/redmine-openapi.yml
+- name: basicAuth
+  type: http
+  scheme: basic
+  sources:
+  - openapi/redmine-openapi.yml
