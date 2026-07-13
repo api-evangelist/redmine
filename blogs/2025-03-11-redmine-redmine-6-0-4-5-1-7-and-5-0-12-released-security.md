@@ -1,0 +1,8 @@
+---
+title: "Redmine - Redmine 6.0.4, 5.1.7 and 5.0.12 released (security fixes)"
+url: "https://www.redmine.org/news/152"
+date: "2025-03-11"
+author: "Marius BĂLTEANU"
+feed_url: "https://www.redmine.org/news.atom"
+---
+<p>We have released new maintenance updates, Redmine <a class="version" href="https://www.redmine.org/versions/206">6.0.4</a>, <a class="version" href="https://www.redmine.org/versions/205">5.1.7</a> and <a class="version" href="https://www.redmine.org/versions/207">5.0.12</a>.<br />These 3 maintenance releases are available for <a class="wiki-page" href="https://www.redmine.org/projects/redmine/wiki/Download">download</a>, you can review the changes in the <a class="wiki-page" href="https://www.redmine.org/projects/redmine/wiki/Changelog">Changelog</a>.</p> All versions contain <strong>multiple important security fixes</strong>: <ul> <li>2 XSS vulnerabilities</li> <li>Project query leaks details of private projects </li> <li>/my/account does not correctly enforce sudo mode</li> <li>Update Nokogiri to 1.18.3 to address CVE-2025-24928 and CVE-2024-56171<br />You can review them in <a class="wiki-page" href="https://www.redmine.org/projects/redmine/wiki/Security_Advisories">Security Advisories</a>.</li> </ul> <p>Beside the security issues, <a class="issue tracker-1 status-5 priority-4 priority-default closed" title="Defect: 5.1-stable: Redmine fails to start with error: Unknown database adapter `&quot;mysql2&quot;` found in confi... (Closed)" href="https://www.redmine.org/issues/42245">#42245</a> is now fixed also on <a class="version" href="https://www.redmine.org/versions/205">5.1.7</a>.</p> <p>Thank you to everyone who contributed to the releases and special thanks to Holger Just for handling all these security issues.</p>

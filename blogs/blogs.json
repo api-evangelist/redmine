@@ -1,0 +1,14 @@
+{
+  "repo": "redmine",
+  "feeds": [
+    {
+      "source": "https://www.redmine.org/news.atom",
+      "feed_url": "https://www.redmine.org/news.atom",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    }
+  ],
+  "fetched": "2026-07-11T11:50:51Z",
+  "post_count": 10
+}
