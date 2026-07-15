@@ -46,6 +46,8 @@ apis:
         url: https://www.redmine.org/projects/redmine/wiki/Rest_Projects
 
 common:
+  - type: AgenticAccess
+    url: agentic-access/redmine-agentic-access.yml
   - type: DomainSecurity
     url: security/redmine-domain-security.yml
   - type: Authentication
