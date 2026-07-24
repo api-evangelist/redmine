@@ -1,0 +1,68 @@
+openapi: 3.1.0
+info:
+  title: Redmine REST Attachments Time Entries API
+  description: REST API for Redmine project management. Base URL is your Redmine instance URL.
+  version: 1.0.0
+servers:
+- url: https://{redmine_host}
+  description: Redmine instance
+  variables:
+    redmine_host:
+      default: redmine.example.com
+security:
+- apiKeyHeader: []
+- apiKeyQuery: []
+- basicAuth: []
+tags:
+- name: Time Entries
+paths:
+  /time_entries/{id}.json:
+    parameters:
+    - $ref: '#/components/parameters/id'
+    get:
+      summary: Show time entry
+      responses:
+        '200':
+          description: Time entry
+      tags:
+      - Time Entries
+    put:
+      summary: Update time entry
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '204':
+          description: Updated
+      tags:
+      - Time Entries
+    delete:
+      summary: Delete time entry
+      responses:
+        '204':
+          description: Deleted
+      tags:
+      - Time Entries
+components:
+  parameters:
+    id:
+      name: id
+      in: path
+      required: true
+      schema:
+        type: string
+  securitySchemes:
+    apiKeyHeader:
+      type: apiKey
+      in: header
+      name: X-Redmine-API-Key
+    apiKeyQuery:
+      type: apiKey
+      in: query
+      name: key
+    basicAuth:
+      type: http
+      scheme: basic

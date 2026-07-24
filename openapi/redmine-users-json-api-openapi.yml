@@ -1,0 +1,69 @@
+openapi: 3.1.0
+info:
+  title: Redmine REST Attachments Users.json API
+  description: REST API for Redmine project management. Base URL is your Redmine instance URL.
+  version: 1.0.0
+servers:
+- url: https://{redmine_host}
+  description: Redmine instance
+  variables:
+    redmine_host:
+      default: redmine.example.com
+security:
+- apiKeyHeader: []
+- apiKeyQuery: []
+- basicAuth: []
+tags:
+- name: Users.json
+paths:
+  /users.json:
+    get:
+      summary: List users
+      parameters:
+      - $ref: '#/components/parameters/offset'
+      - $ref: '#/components/parameters/limit'
+      responses:
+        '200':
+          description: Users collection
+      tags:
+      - Users.json
+    post:
+      summary: Create user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: User created
+      tags:
+      - Users.json
+components:
+  parameters:
+    limit:
+      name: limit
+      in: query
+      schema:
+        type: integer
+        default: 25
+        maximum: 100
+    offset:
+      name: offset
+      in: query
+      schema:
+        type: integer
+        default: 0
+  securitySchemes:
+    apiKeyHeader:
+      type: apiKey
+      in: header
+      name: X-Redmine-API-Key
+    apiKeyQuery:
+      type: apiKey
+      in: query
+      name: key
+    basicAuth:
+      type: http
+      scheme: basic

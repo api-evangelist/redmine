@@ -1,0 +1,39 @@
+openapi: 3.1.0
+info:
+  title: Redmine REST Attachments Issue Statuses.json API
+  description: REST API for Redmine project management. Base URL is your Redmine instance URL.
+  version: 1.0.0
+servers:
+- url: https://{redmine_host}
+  description: Redmine instance
+  variables:
+    redmine_host:
+      default: redmine.example.com
+security:
+- apiKeyHeader: []
+- apiKeyQuery: []
+- basicAuth: []
+tags:
+- name: Issue Statuses.json
+paths:
+  /issue_statuses.json:
+    get:
+      summary: List issue statuses
+      responses:
+        '200':
+          description: Issue statuses
+      tags:
+      - Issue Statuses.json
+components:
+  securitySchemes:
+    apiKeyHeader:
+      type: apiKey
+      in: header
+      name: X-Redmine-API-Key
+    apiKeyQuery:
+      type: apiKey
+      in: query
+      name: key
+    basicAuth:
+      type: http
+      scheme: basic
