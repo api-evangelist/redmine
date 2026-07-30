@@ -9,7 +9,19 @@ description: >-
   is supported via HTTP Basic credentials or per-user API keys, with
   optional user impersonation for administrator accounts.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/redmine.png
 tags:
   - Project Management
   - Issue Tracking
@@ -23,28 +35,196 @@ created: '2026-05-11'
 modified: '2026-05-11'
 specificationVersion: '0.19'
 apis:
-  - aid: redmine:rest-api
-    name: Redmine REST API
-    description: >-
-      REST API for Redmine providing JSON and XML access to issues,
-      projects, users, time entries, wiki pages, attachments, versions,
-      and other entities. Authentication uses HTTP Basic credentials or
-      a per-user API key, with X-Redmine-Switch-User for impersonation.
-    humanURL: https://www.redmine.org/projects/redmine/wiki/rest_api
-    baseURL: https://<your-redmine-host>
-    tags:
-      - Project Management
-      - Issue Tracking
-      - Time Tracking
-      - Wiki
-    properties:
-      - type: Documentation
-        url: https://www.redmine.org/projects/redmine/wiki/rest_api
-      - type: Issues API
-        url: https://www.redmine.org/projects/redmine/wiki/Rest_Issues
-      - type: Projects API
-        url: https://www.redmine.org/projects/redmine/wiki/Rest_Projects
-
+- aid: redmine:rest-api
+  name: Redmine REST API
+  description: >-
+    REST API for Redmine providing JSON and XML access to issues, projects, users, time entries, wiki
+    pages, attachments, versions, and other entities. Authentication uses HTTP Basic credentials or a
+    per-user API key, with X-Redmine-Switch-User for impersonation.
+  humanURL: https://www.redmine.org/projects/redmine/wiki/rest_api
+  baseURL: https://<your-redmine-host>
+  tags:
+  - Project Management
+  - Issue Tracking
+  - Time Tracking
+  - Wiki
+  properties:
+  - type: Documentation
+    url: https://www.redmine.org/projects/redmine/wiki/rest_api
+  - type: Issues API
+    url: https://www.redmine.org/projects/redmine/wiki/Rest_Issues
+  - type: Projects API
+    url: https://www.redmine.org/projects/redmine/wiki/Rest_Projects
+- aid: redmine:redmine-attachments-api
+  name: Redmine Attachments API
+  description: The Attachments API from Redmine — 1 operation(s) for attachments.
+  humanURL: https://www.redmine.org/projects/redmine/wiki/rest_api
+  baseURL: https://<your-redmine-host>
+  tags:
+  - Attachments
+  properties:
+  - type: OpenAPI
+    url: openapi/redmine-attachments-api-openapi.yml
+- aid: redmine:redmine-custom-fields-json-api
+  name: Redmine Custom Fields.json API
+  description: The Custom Fields.json API from Redmine — 1 operation(s) for custom fields.json.
+  humanURL: https://www.redmine.org/projects/redmine/wiki/rest_api
+  baseURL: https://<your-redmine-host>
+  tags:
+  - Custom Fields.json
+  properties:
+  - type: OpenAPI
+    url: openapi/redmine-custom-fields-json-api-openapi.yml
+- aid: redmine:redmine-groups-json-api
+  name: Redmine Groups.json API
+  description: The Groups.json API from Redmine — 1 operation(s) for groups.json.
+  humanURL: https://www.redmine.org/projects/redmine/wiki/rest_api
+  baseURL: https://<your-redmine-host>
+  tags:
+  - Groups.json
+  properties:
+  - type: OpenAPI
+    url: openapi/redmine-groups-json-api-openapi.yml
+- aid: redmine:redmine-issue-statuses-json-api
+  name: Redmine Issue Statuses.json API
+  description: The Issue Statuses.json API from Redmine — 1 operation(s) for issue statuses.json.
+  humanURL: https://www.redmine.org/projects/redmine/wiki/rest_api
+  baseURL: https://<your-redmine-host>
+  tags:
+  - Issue Statuses.json
+  properties:
+  - type: OpenAPI
+    url: openapi/redmine-issue-statuses-json-api-openapi.yml
+- aid: redmine:redmine-issues-api
+  name: Redmine Issues API
+  description: The Issues API from Redmine — 1 operation(s) for issues.
+  humanURL: https://www.redmine.org/projects/redmine/wiki/rest_api
+  baseURL: https://<your-redmine-host>
+  tags:
+  - Issues
+  properties:
+  - type: OpenAPI
+    url: openapi/redmine-issues-api-openapi.yml
+- aid: redmine:redmine-issues-json-api
+  name: Redmine Issues.json API
+  description: The Issues.json API from Redmine — 1 operation(s) for issues.json.
+  humanURL: https://www.redmine.org/projects/redmine/wiki/rest_api
+  baseURL: https://<your-redmine-host>
+  tags:
+  - Issues.json
+  properties:
+  - type: OpenAPI
+    url: openapi/redmine-issues-json-api-openapi.yml
+- aid: redmine:redmine-my-api
+  name: Redmine My API
+  description: The My API from Redmine — 1 operation(s) for my.
+  humanURL: https://www.redmine.org/projects/redmine/wiki/rest_api
+  baseURL: https://<your-redmine-host>
+  tags:
+  - My
+  properties:
+  - type: OpenAPI
+    url: openapi/redmine-my-api-openapi.yml
+- aid: redmine:redmine-projects-api
+  name: Redmine Projects API
+  description: The Projects API from Redmine — 1 operation(s) for projects.
+  humanURL: https://www.redmine.org/projects/redmine/wiki/rest_api
+  baseURL: https://<your-redmine-host>
+  tags:
+  - Projects
+  properties:
+  - type: OpenAPI
+    url: openapi/redmine-projects-api-openapi.yml
+- aid: redmine:redmine-projects-json-api
+  name: Redmine Projects.json API
+  description: The Projects.json API from Redmine — 1 operation(s) for projects.json.
+  humanURL: https://www.redmine.org/projects/redmine/wiki/rest_api
+  baseURL: https://<your-redmine-host>
+  tags:
+  - Projects.json
+  properties:
+  - type: OpenAPI
+    url: openapi/redmine-projects-json-api-openapi.yml
+- aid: redmine:redmine-roles-json-api
+  name: Redmine Roles.json API
+  description: The Roles.json API from Redmine — 1 operation(s) for roles.json.
+  humanURL: https://www.redmine.org/projects/redmine/wiki/rest_api
+  baseURL: https://<your-redmine-host>
+  tags:
+  - Roles.json
+  properties:
+  - type: OpenAPI
+    url: openapi/redmine-roles-json-api-openapi.yml
+- aid: redmine:redmine-time-entries-api
+  name: Redmine Time Entries API
+  description: The Time Entries API from Redmine — 1 operation(s) for time entries.
+  humanURL: https://www.redmine.org/projects/redmine/wiki/rest_api
+  baseURL: https://<your-redmine-host>
+  tags:
+  - Time Entries
+  properties:
+  - type: OpenAPI
+    url: openapi/redmine-time-entries-api-openapi.yml
+- aid: redmine:redmine-time-entries-json-api
+  name: Redmine Time Entries.json API
+  description: The Time Entries.json API from Redmine — 1 operation(s) for time entries.json.
+  humanURL: https://www.redmine.org/projects/redmine/wiki/rest_api
+  baseURL: https://<your-redmine-host>
+  tags:
+  - Time Entries.json
+  properties:
+  - type: OpenAPI
+    url: openapi/redmine-time-entries-json-api-openapi.yml
+- aid: redmine:redmine-trackers-json-api
+  name: Redmine Trackers.json API
+  description: The Trackers.json API from Redmine — 1 operation(s) for trackers.json.
+  humanURL: https://www.redmine.org/projects/redmine/wiki/rest_api
+  baseURL: https://<your-redmine-host>
+  tags:
+  - Trackers.json
+  properties:
+  - type: OpenAPI
+    url: openapi/redmine-trackers-json-api-openapi.yml
+- aid: redmine:redmine-uploads-json-api
+  name: Redmine Uploads.json API
+  description: The Uploads.json API from Redmine — 1 operation(s) for uploads.json.
+  humanURL: https://www.redmine.org/projects/redmine/wiki/rest_api
+  baseURL: https://<your-redmine-host>
+  tags:
+  - Uploads.json
+  properties:
+  - type: OpenAPI
+    url: openapi/redmine-uploads-json-api-openapi.yml
+- aid: redmine:redmine-users-api
+  name: Redmine Users API
+  description: The Users API from Redmine — 1 operation(s) for users.
+  humanURL: https://www.redmine.org/projects/redmine/wiki/rest_api
+  baseURL: https://<your-redmine-host>
+  tags:
+  - Users
+  properties:
+  - type: OpenAPI
+    url: openapi/redmine-users-api-openapi.yml
+- aid: redmine:redmine-users-json-api
+  name: Redmine Users.json API
+  description: The Users.json API from Redmine — 1 operation(s) for users.json.
+  humanURL: https://www.redmine.org/projects/redmine/wiki/rest_api
+  baseURL: https://<your-redmine-host>
+  tags:
+  - Users.json
+  properties:
+  - type: OpenAPI
+    url: openapi/redmine-users-json-api-openapi.yml
+- aid: redmine:redmine-wiki-pages-json-api
+  name: Redmine Wiki Pages.json API
+  description: The Wiki Pages.json API from Redmine — 1 operation(s) for wiki pages.json.
+  humanURL: https://www.redmine.org/projects/redmine/wiki/rest_api
+  baseURL: https://<your-redmine-host>
+  tags:
+  - Wiki Pages.json
+  properties:
+  - type: OpenAPI
+    url: openapi/redmine-wiki-pages-json-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/redmine-agentic-access.yml
