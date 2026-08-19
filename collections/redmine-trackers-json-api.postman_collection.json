@@ -1,0 +1,143 @@
+{
+  "item": [
+    {
+      "id": "aba8f8ba-ebe6-43e7-a7c2-d74e9942b56c",
+      "name": "Trackers.json",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "c9092ceb-92bd-4227-969d-77870d7a911b",
+          "name": "List trackers",
+          "request": {
+            "name": "List trackers",
+            "description": {},
+            "url": {
+              "path": [
+                "trackers.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "type": "any",
+                  "value": "{{redmine_host}}",
+                  "key": "redmine_host"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f8d55ea5-7774-4a38-b3da-0487276c4ae4",
+              "name": "Trackers",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "trackers.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{redmine_host}}",
+                      "key": "redmine_host"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Redmine-API-Key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "redmine.example.com",
+      "key": "redmine_host"
+    },
+    {
+      "type": "string",
+      "value": "https://{{redmine_host}}",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "X-Redmine-API-Key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "4067bbfa-6a14-414a-b8ae-d58a6752b0a6",
+    "name": "Redmine REST Attachments Trackers.json API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for Redmine project management. Base URL is your Redmine instance URL.",
+      "type": "text/plain"
+    }
+  }
+}

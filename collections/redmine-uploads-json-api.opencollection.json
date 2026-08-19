@@ -1,0 +1,37 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Redmine REST Attachments Uploads.json API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-Redmine-API-Key",
+      "value": "{{X-Redmine-API-Key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Uploads.json",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Upload file",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{redmine_host}/uploads.json"
+          },
+          "docs": "Upload file"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

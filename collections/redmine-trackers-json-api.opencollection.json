@@ -1,0 +1,37 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Redmine REST Attachments Trackers.json API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-Redmine-API-Key",
+      "value": "{{X-Redmine-API-Key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Trackers.json",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List trackers",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{redmine_host}/trackers.json"
+          },
+          "docs": "List trackers"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

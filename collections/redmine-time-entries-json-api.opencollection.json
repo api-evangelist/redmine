@@ -1,0 +1,52 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Redmine REST Attachments Time Entries.json API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-Redmine-API-Key",
+      "value": "{{X-Redmine-API-Key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Time Entries.json",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List time entries",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{redmine_host}/time_entries.json"
+          },
+          "docs": "List time entries"
+        },
+        {
+          "info": {
+            "name": "Create time entry",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{redmine_host}/time_entries.json",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create time entry"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,84 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Redmine REST Attachments Time Entries API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-Redmine-API-Key",
+      "value": "{{X-Redmine-API-Key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Time Entries",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Show time entry",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{redmine_host}/time_entries/:id.json",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Show time entry"
+        },
+        {
+          "info": {
+            "name": "Update time entry",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://{redmine_host}/time_entries/:id.json",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update time entry"
+        },
+        {
+          "info": {
+            "name": "Delete time entry",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://{redmine_host}/time_entries/:id.json",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete time entry"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

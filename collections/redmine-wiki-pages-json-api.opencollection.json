@@ -1,0 +1,52 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Redmine REST Attachments Wiki Pages.json API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-Redmine-API-Key",
+      "value": "{{X-Redmine-API-Key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Wiki Pages.json",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List wiki pages",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{redmine_host}/wiki_pages.json"
+          },
+          "docs": "List wiki pages"
+        },
+        {
+          "info": {
+            "name": "Create wiki page",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{redmine_host}/wiki_pages.json",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create wiki page"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

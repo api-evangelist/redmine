@@ -1,0 +1,84 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Redmine REST Attachments Projects API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-Redmine-API-Key",
+      "value": "{{X-Redmine-API-Key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Projects",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Show project",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{redmine_host}/projects/:id.json",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Show project"
+        },
+        {
+          "info": {
+            "name": "Update project",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://{redmine_host}/projects/:id.json",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update project"
+        },
+        {
+          "info": {
+            "name": "Delete project",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://{redmine_host}/projects/:id.json",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete project"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

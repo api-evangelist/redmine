@@ -1,0 +1,145 @@
+{
+  "item": [
+    {
+      "id": "1f1d2e53-8627-4827-9b37-437f5ba91c9c",
+      "name": "My",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "a666a688-d51c-4d3f-a23e-7dd273d27202",
+          "name": "Get my account",
+          "request": {
+            "name": "Get my account",
+            "description": {},
+            "url": {
+              "path": [
+                "my",
+                "account.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "type": "any",
+                  "value": "{{redmine_host}}",
+                  "key": "redmine_host"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0ee3891f-f257-4619-9201-d2cb2f152215",
+              "name": "My account",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "my",
+                    "account.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{redmine_host}}",
+                      "key": "redmine_host"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Redmine-API-Key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "redmine.example.com",
+      "key": "redmine_host"
+    },
+    {
+      "type": "string",
+      "value": "https://{{redmine_host}}",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "X-Redmine-API-Key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "dba900b9-c8f6-4006-af3f-aa82fc38d544",
+    "name": "Redmine REST Attachments My API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for Redmine project management. Base URL is your Redmine instance URL.",
+      "type": "text/plain"
+    }
+  }
+}

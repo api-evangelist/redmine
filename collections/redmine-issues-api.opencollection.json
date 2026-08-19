@@ -1,0 +1,84 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Redmine REST Attachments Issues API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-Redmine-API-Key",
+      "value": "{{X-Redmine-API-Key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Issues",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Show issue",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{redmine_host}/issues/:id.json",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Show issue"
+        },
+        {
+          "info": {
+            "name": "Update issue",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://{redmine_host}/issues/:id.json",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update issue"
+        },
+        {
+          "info": {
+            "name": "Delete issue",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://{redmine_host}/issues/:id.json",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete issue"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

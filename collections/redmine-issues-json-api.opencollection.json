@@ -1,0 +1,64 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Redmine REST Attachments Issues.json API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-Redmine-API-Key",
+      "value": "{{X-Redmine-API-Key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Issues.json",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List issues",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{redmine_host}/issues.json",
+            "params": [
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List issues"
+        },
+        {
+          "info": {
+            "name": "Create issue",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{redmine_host}/issues.json",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create issue"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
