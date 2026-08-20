@@ -25,6 +25,13 @@ image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/redmine.pn
 tags:
   - Project Management
   - Issue Tracking
+  - Open-Source
+  - Ruby on Rails
+  - Bug Tracking
+  - Time Tracking
+tags_raw:
+  - Project Management
+  - Issue Tracking
   - Open Source
   - Ruby on Rails
   - Bug Tracking
@@ -131,6 +138,8 @@ apis:
   humanURL: https://www.redmine.org/projects/redmine/wiki/rest_api
   baseURL: https://<your-redmine-host>
   tags:
+  - Project
+  tags_raw:
   - Projects
   properties:
   - type: OpenAPI
@@ -201,6 +210,8 @@ apis:
   humanURL: https://www.redmine.org/projects/redmine/wiki/rest_api
   baseURL: https://<your-redmine-host>
   tags:
+  - User
+  tags_raw:
   - Users
   properties:
   - type: OpenAPI
