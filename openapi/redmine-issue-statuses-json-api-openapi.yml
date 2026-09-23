@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Redmine REST Attachments Issue Statuses.json API
+  title: Redmine REST Issue Statuses.json API
   description: REST API for Redmine project management. Base URL is your Redmine instance URL.
   version: 1.0.0
 servers:
@@ -24,6 +24,8 @@ paths:
           description: Issue statuses
       tags:
       - Issue Statuses.json
+      operationId: getIssueStatusesJson
+      x-operation-id-source: derived
 components:
   securitySchemes:
     apiKeyHeader:

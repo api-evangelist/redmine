@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: Redmine REST Attachments API
   description: REST API for Redmine project management. Base URL is your Redmine instance URL.
@@ -26,6 +26,8 @@ paths:
           description: Attachment
       tags:
       - Attachments
+      operationId: getAttachments{id}Json
+      x-operation-id-source: derived
     delete:
       summary: Delete attachment
       responses:
@@ -33,6 +35,8 @@ paths:
           description: Deleted
       tags:
       - Attachments
+      operationId: deleteAttachments{id}Json
+      x-operation-id-source: derived
 components:
   parameters:
     id:

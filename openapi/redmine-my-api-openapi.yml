@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Redmine REST Attachments My API
+  title: Redmine REST My API
   description: REST API for Redmine project management. Base URL is your Redmine instance URL.
   version: 1.0.0
 servers:
@@ -24,6 +24,8 @@ paths:
           description: My account
       tags:
       - My
+      operationId: getMyAccountJson
+      x-operation-id-source: derived
 components:
   securitySchemes:
     apiKeyHeader:

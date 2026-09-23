@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Redmine REST Attachments Projects API
+  title: Redmine REST Projects API
   description: REST API for Redmine project management. Base URL is your Redmine instance URL.
   version: 1.0.0
 servers:
@@ -26,6 +26,8 @@ paths:
           description: Project
       tags:
       - Projects
+      operationId: getProjects{id}Json
+      x-operation-id-source: derived
     put:
       summary: Update project
       requestBody:
@@ -39,6 +41,8 @@ paths:
           description: Updated
       tags:
       - Projects
+      operationId: putProjects{id}Json
+      x-operation-id-source: derived
     delete:
       summary: Delete project
       responses:
@@ -46,6 +50,8 @@ paths:
           description: Deleted
       tags:
       - Projects
+      operationId: deleteProjects{id}Json
+      x-operation-id-source: derived
 components:
   parameters:
     id:

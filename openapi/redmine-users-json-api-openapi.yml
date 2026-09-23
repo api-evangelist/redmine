@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Redmine REST Attachments Users.json API
+  title: Redmine REST Users.json API
   description: REST API for Redmine project management. Base URL is your Redmine instance URL.
   version: 1.0.0
 servers:
@@ -27,6 +27,8 @@ paths:
           description: Users collection
       tags:
       - Users.json
+      operationId: getUsersJson
+      x-operation-id-source: derived
     post:
       summary: Create user
       requestBody:
@@ -40,6 +42,8 @@ paths:
           description: User created
       tags:
       - Users.json
+      operationId: postUsersJson
+      x-operation-id-source: derived
 components:
   parameters:
     limit:
