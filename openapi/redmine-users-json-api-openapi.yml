@@ -46,12 +46,6 @@ paths:
       x-operation-id-source: derived
 components:
   parameters:
-    offset:
-      name: offset
-      in: query
-      schema:
-        type: integer
-        default: 0
     limit:
       name: limit
       in: query
@@ -59,6 +53,12 @@ components:
         type: integer
         default: 25
         maximum: 100
+    offset:
+      name: offset
+      in: query
+      schema:
+        type: integer
+        default: 0
   securitySchemes:
     apiKeyHeader:
       type: apiKey
