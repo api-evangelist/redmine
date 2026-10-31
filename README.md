@@ -1,4 +1,4 @@
-# Redmine (redmine)
+# Redmine
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,64 +66,130 @@
 
 Redmine is a flexible open source project management web application written in Ruby on Rails that supports multiple projects, issue tracking, Gantt charts, wikis, forums, time tracking, and SCM integration. The Redmine REST API exposes JSON and XML endpoints for issues, projects, users, time entries, wiki pages, attachments, and more. Authentication is supported via HTTP Basic credentials or per-user API keys, with optional user impersonation for administrator accounts.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/redmine/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/redmine/refs/heads/main/apis.yml)
+**Areas:** Project Management · Issue Tracking · Open Source · Ruby on Rails · Bug Tracking · Time Tracking
 
-## Scope
+## Redmine on APIs.io
 
-- **Type:** Index
+Everything profiled for Redmine is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/redmine/](https://apis.io/providers/redmine/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (18)
 
-- Project Management
-- Issue Tracking
-- Open Source
-- Ruby on Rails
-- Bug Tracking
-- Time Tracking
+- [Redmine REST API](https://apis.io/apis/redmine/rest-api/) — REST API for Redmine providing JSON and XML access to issues, projects, users, time entries, wiki pages, attachments, versions, and other entities.…
+- [Redmine Attachments API](https://apis.io/apis/redmine/redmine-attachments-api/) — The Attachments API from Redmine — 1 operation(s) for attachments.
+- [Redmine Custom Fields.json API](https://apis.io/apis/redmine/redmine-custom-fields-json-api/) — The Custom Fields.json API from Redmine — 1 operation(s) for custom fields.json.
+- [Redmine Groups.json API](https://apis.io/apis/redmine/redmine-groups-json-api/) — The Groups.json API from Redmine — 1 operation(s) for groups.json.
+- [Redmine Issue Statuses.json API](https://apis.io/apis/redmine/redmine-issue-statuses-json-api/) — The Issue Statuses.json API from Redmine — 1 operation(s) for issue statuses.json.
+- [Redmine Issues API](https://apis.io/apis/redmine/redmine-issues-api/) — The Issues API from Redmine — 1 operation(s) for issues.
+- [Redmine Issues.json API](https://apis.io/apis/redmine/redmine-issues-json-api/) — The Issues.json API from Redmine — 1 operation(s) for issues.json.
+- [Redmine My API](https://apis.io/apis/redmine/redmine-my-api/) — The My API from Redmine — 1 operation(s) for my.
+- [Redmine Projects API](https://apis.io/apis/redmine/redmine-projects-api/) — The Projects API from Redmine — 1 operation(s) for projects.
+- [Redmine Projects.json API](https://apis.io/apis/redmine/redmine-projects-json-api/) — The Projects.json API from Redmine — 1 operation(s) for projects.json.
+- [Redmine Roles.json API](https://apis.io/apis/redmine/redmine-roles-json-api/) — The Roles.json API from Redmine — 1 operation(s) for roles.json.
+- [Redmine Time Entries API](https://apis.io/apis/redmine/redmine-time-entries-api/) — The Time Entries API from Redmine — 1 operation(s) for time entries.
+- [Redmine Time Entries.json API](https://apis.io/apis/redmine/redmine-time-entries-json-api/) — The Time Entries.json API from Redmine — 1 operation(s) for time entries.json.
+- [Redmine Trackers.json API](https://apis.io/apis/redmine/redmine-trackers-json-api/) — The Trackers.json API from Redmine — 1 operation(s) for trackers.json.
+- [Redmine Uploads.json API](https://apis.io/apis/redmine/redmine-uploads-json-api/) — The Uploads.json API from Redmine — 1 operation(s) for uploads.json.
+- [Redmine Users API](https://apis.io/apis/redmine/redmine-users-api/) — The Users API from Redmine — 1 operation(s) for users.
+- [Redmine Users.json API](https://apis.io/apis/redmine/redmine-users-json-api/) — The Users.json API from Redmine — 1 operation(s) for users.json.
+- [Redmine Wiki Pages.json API](https://apis.io/apis/redmine/redmine-wiki-pages-json-api/) — The Wiki Pages.json API from Redmine — 1 operation(s) for wiki pages.json.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-05-11
-- **Modified:** 2026-05-11
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Redmine REST API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-REST API for Redmine providing JSON and XML access to issues, projects, users, time entries, wiki pages, attachments, versions, and other entities. Authentication uses HTTP Basic credentials or a per-user API key, with X-Redmine-Switch-User for impersonation.
+- [Redmine Agentic Access](https://apis.io/agentic-access/redmine/redmine-agentic-access/)
 
-- **Human URL:** [https://www.redmine.org/projects/redmine/wiki/rest_api](https://www.redmine.org/projects/redmine/wiki/rest_api)
-- **Base URL:** `https://<your-redmine-host>`
+#### Collections (18)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- Project Management
-- Issue Tracking
-- Time Tracking
-- Wiki
+- [Redmine REST API](https://apis.io/collections/redmine/open-redmine/)
+- [Redmine REST Attachments API](https://apis.io/collections/redmine/open-redmine-attachments-api/)
+- [Redmine REST Attachments Custom Fields.json API](https://apis.io/collections/redmine/open-redmine-custom-fields-json-api/)
+- [Redmine REST Attachments Groups.json API](https://apis.io/collections/redmine/open-redmine-groups-json-api/)
+- [Redmine REST Attachments Issue Statuses.json API](https://apis.io/collections/redmine/open-redmine-issue-statuses-json-api/)
+- [Redmine REST Attachments Issues API](https://apis.io/collections/redmine/open-redmine-issues-api/)
+- [Redmine REST Attachments Issues.json API](https://apis.io/collections/redmine/open-redmine-issues-json-api/)
+- [Redmine REST Attachments My API](https://apis.io/collections/redmine/open-redmine-my-api/)
+- [Redmine REST Attachments Projects API](https://apis.io/collections/redmine/open-redmine-projects-api/)
+- [Redmine REST Attachments Projects.json API](https://apis.io/collections/redmine/open-redmine-projects-json-api/)
+- [Redmine REST Attachments Roles.json API](https://apis.io/collections/redmine/open-redmine-roles-json-api/)
+- [Redmine REST Attachments Time Entries API](https://apis.io/collections/redmine/open-redmine-time-entries-api/)
+- [Redmine REST Attachments Time Entries.json API](https://apis.io/collections/redmine/open-redmine-time-entries-json-api/)
+- [Redmine REST Attachments Trackers.json API](https://apis.io/collections/redmine/open-redmine-trackers-json-api/)
+- [Redmine REST Attachments Uploads.json API](https://apis.io/collections/redmine/open-redmine-uploads-json-api/)
+- [Redmine REST Attachments Users API](https://apis.io/collections/redmine/open-redmine-users-api/)
+- [Redmine REST Attachments Users.json API](https://apis.io/collections/redmine/open-redmine-users-json-api/)
+- [Redmine REST Attachments Wiki Pages.json API](https://apis.io/collections/redmine/open-redmine-wiki-pages-json-api/)
 
-#### Properties
+#### Security (2)
 
-- [Documentation](https://www.redmine.org/projects/redmine/wiki/rest_api)
-- [Issues  A P I](https://www.redmine.org/projects/redmine/wiki/Rest_Issues)
-- [Projects  A P I](https://www.redmine.org/projects/redmine/wiki/Rest_Projects)
-- [Postman Collection](collections/redmine.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/redmine.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Authentication, trust centre, and vulnerability disclosure.
 
-## Common Properties
+- [Redmine Authentication](https://apis.io/security/redmine/redmine-authentication/)
+- [Redmine Domain Security](https://apis.io/security/redmine/redmine-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.redmine.org)
 - [Documentation](https://www.redmine.org/guide)
-- [A P I  Documentation](https://www.redmine.org/projects/redmine/wiki/rest_api)
-- [Download](https://www.redmine.org/projects/redmine/wiki/Download)
-- [Source  Code](https://www.redmine.org/projects/redmine/repository)
-- [Git Hub  Mirror](https://github.com/redmine/redmine)
-- [Plugins](https://www.redmine.org/plugins)
-- [Forums](https://www.redmine.org/projects/redmine/boards)
-- [Issue  Tracker](https://www.redmine.org/projects/redmine/issues)
-- [License](https://www.redmine.org/projects/redmine/wiki/Redmine_License)
+- [Blog](https://www.redmine.org/news.atom)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 23.6** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 41.4 |
+| Contract governance | 0.0 |
+| Operational transparency | 5.3 |
+| Developer ergonomics | 35.7 |
+| Access clarity | 0.0 |
+
+**Agent readiness 17.3** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 11.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/redmine/](https://apis.io/providers/redmine/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Redmine: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/redmine/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
